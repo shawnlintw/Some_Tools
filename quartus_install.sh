@@ -14,4 +14,13 @@
 		 exit 
 	 fi
 	 ./Quartus*.run 
+	 cd ~/Desktop
+	 if [ -f Quartus*.desktop ]; 
+	 then 
+		mv Quartus*.desktop ~/.local/share/applications/
+		cp ~/.local/share/applications/Quartus*.desktop ~/Desktop
+	 else
+		echo "installation failed.";
+		exit 
+	 fi 
 	 exit
